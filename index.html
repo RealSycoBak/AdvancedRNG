@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Random Number Gen</title>
+      <link href="style.css" rel="stylesheet" type="text/css" />
+   </head>
+   <body ondragover="drag_over(event)" ondrop="drop(event)">
+     <center>
+       <div class="uiscreen" id="dg" draggable="true" ondragstart="drag_start(event)">
+      <div class="Title">
+         <h1>Random Number Generator</h1>
+      </div>
+         <div class="Generators">
+            <div class="RangedGenerator"></div>
+            <div>
+               <span>Smallest Number: </span>
+               <input id="v0" style="width:5vh; border-radius: 25px; outline: none; border-width:1px;" type="text" name="v0" value="0"><br/>
+            </div>
+            <div>
+               <span>Largest Number: </span>
+               <input id="v1" style="width:5vh; border-radius: 25px; outline: none; border-width:1px;" type="text" name="v1" value="10"><br/>
+            </div>
+            <div>
+               <div class="arrowpopup" style="color: blue;" onclick="myFunction()"><img src="info.png" alt="" width="12" height="12">
+                  <span class="tooltiptext" id="tooltipdemo">Divisible "Divisible By" means "when you divide one number by another the result is a whole number "</span>
+               </div>
+               <label for="divby">Divisible</label>
+               <input type="checkbox" id="divby" name="divby" style="cursor: pointer;"value="divby" onclick="divisible()">
+               <input id="text" style="display:none" type="text" name="divby" value="2"><br/>
+            </div>
+            <div>
+               <div class="arrowpopup" style="color: blue;" onclick="myFunction2()"><img src="info.png" alt="" width="12" height="12">
+                  <span class="tooltiptext" id="tooltipdemo2">Generates random numbers into a array of a given size</span>
+               </div>
+               <label for="Array">Array</label>
+               <input type="checkbox" id="Array" name="Array" style="cursor: pointer;"value="Array" onclick="Array_func()">
+               <input id="text2" style="display:none" type="text2" name="Array" value="1"><br/>
+            </div>
+             <div>
+               <div class="arrowpopup" style="color: blue;" onclick="myFunction3()"><img src="info.png" alt="" width="12" height="12">
+                  <span class="tooltiptext" id="tooltipdemo3">Generates random numbers into a list of a given size</span>
+               </div>
+               <label for="List">List</label>
+               <input type="checkbox" id="List" name="List" style="cursor: pointer;"value="List" onclick="List_func()">
+               <input id="text3" style="display:none" type="text3" name="List" value="1"><br/>
+            </div>
+            <div>
+               <div class="arrowpopup" style="color: blue;" onclick="myFunction4()"><img src="info.png" alt="" width="12" height="12">
+                  <span class="tooltiptext" id="tooltipdemo4">Instead of randomizing the numbers in the given range, this will keep them in consecutive order from down and inclduing the smallest number to up and including the largest number!</span>
+               </div>
+               <label for="Order">Order</label>
+               <input type="checkbox" id="Order" name="Order" style="cursor: pointer;"value="Order"><br/>
+            </div>
+            <div>
+               <span>-- Output -- </span><br/>
+               <textarea id="gennum" style="width:20vh; border-radius: 10px; outline: none; border-width:1px; resize: none;" type="text" name="gennum" readonly="readonly" value="" cols="40" rows="5"></textarea><br/>
+               <button class="btn disable-dbl-tap-zoom" onclick="RangeGen()">Generate</button>
+               <button class="btn disable-dbl-tap-zoom" onclick="copy()">Copy text</button>
+            </div>
+         </div>
+      </center>
+      </div>
+      <script src="script.js"></script>
+   </body>
+</html>

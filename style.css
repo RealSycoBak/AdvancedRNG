@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+body {
+	background-color: skyblue;
+}
+.uiscreen {
+  position:  relative;
+          top: 15vh;
+}
+.Title {
+  width: 400px;
+	height: 40px;
+  background-color:rgb(0,0,0,0.3);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 13px;
+  font-family: 'PT Sans Narrow', sans-serif;
+	color: white;
+}
+
+.Generators {
+	color: rgb(245, 245, 245);
+	border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+	width: 400px;
+	height: 320px;
+	background-color: rgb(128, 128, 128, 0.3)
+}
+
+.RangedGenerator {
+	color: white;
+	padding-top: 10%;
+}
+
+.arrowpopup {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.arrowpopup .tooltiptext {
+	visibility: hidden;
+	width: 160px;
+	background-color: rgb(0, 0, 255, 0.5);
+	color: white;
+	text-align: center;
+	border-radius: 4px;
+	padding: 9px;
+	position: absolute;
+	bottom: 150%;
+	left: 50%;
+	margin-left: -85px;
+}
+
+.arrowpopup .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: rgb(0, 0, 255, 0.5) transparent transparent transparent;
+}
+
+.arrowpopup .show {
+	visibility: visible;
+}
+
+.btn {
+	border-radius: 25px;
+	outline: none;
+	background-color: rgb(255, 255, 255);
+	cursor: pointer;
+	border-width: 1px;
+}
+
+.btn:hover {
+	border-width: 3px;
+	background-color: rgb(255, 255, 255, 0.8);
+	transition: 0.5s;
+}
+
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
